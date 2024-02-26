@@ -25,9 +25,13 @@ typedef struct binary_tree_s binary_tree_t;
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
+void binary_tree_delete(binary_tree_t *tree);
+int binary_tree_is_leaf(const binary_tree_t *node);
+int binary_tree_is_root(const binary_tree_t *node);
 /* Prototype fpr print functions */
 void binary_tree_print(const binary_tree_t *);
 size_t binary_tree_depth(const binary_tree_t *tree);
 size_t binary_tree_size(const binary_tree_t *tree);
-
+int binary_tree_balance(const binary_tree_t *tree);
+size_t binary_tree_leaves(const binary_tree_t *tree);
 #endif /*BINARY_TREES_H*/
